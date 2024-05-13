@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.VehicleRegistrationActivity"
+    android:background="@drawable/bg_main"
+    android:orientation="vertical">
+
+    <!--Header-->
+    <LinearLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/red"
+        android:gravity="center"
+        android:paddingTop="20dp"
+        android:paddingBottom="5dp"
+        android:minHeight="60dp">
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="60dp"
+            android:layout_marginStart="90dp"
+            android:src="@drawable/logo_main_white"
+            android:contentDescription="@string/title_logo_" />
+
+    </LinearLayout>
+
+    <!--Page details-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title_layout"
+        android:layout_marginBottom="80dp">
+
+        <LinearLayout
+            android:id="@+id/page_details_layout"
+            android:layout_below="@id/title_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="11dp"
+            android:layout_marginTop="14dp"
+            tools:ignore="ObsoleteLayoutParam">
+
+            <!--Truck No-->
+            <LinearLayout
+                android:id="@+id/truck_no_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/truck_no"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="5dp"/>
+
+                <EditText
+                    android:id="@+id/truck_no_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text_bg"
+                    android:minHeight="48dp"
+                    android:inputType="number"
+                    android:layout_marginStart="5dp"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    tools:ignore="Autofill,LabelFor,SpeakableTextPresentCheck,VisualLintTextFieldSize" />
+
+            </LinearLayout>
+
+            <!--Select Transporter-->
+
+            <LinearLayout
+                android:id="@+id/transporter_layout"
+                android:layout_below="@id/truck_no_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/select_transporter_"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    android:layout_marginBottom="5dp"/>
+
+                <!--spinner details-->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/damages_label"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/spinner"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spntransporter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:spinnerMode="dropdown" />
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="right"
+                        android:src="@drawable/spinnerb" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <!--NTSA Inspection No-->
+
+            <LinearLayout
+                android:id="@+id/inspection_no_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@id/transporter_layout"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ntsa_inspection_no"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="5dp"/>
+
+                <EditText
+                    android:id="@+id/inspection_no_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text_bg"
+                    android:minHeight="48dp"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="5dp"
+                    android:padding="5dp"
+                    tools:ignore="Autofill,LabelFor,SpeakableTextPresentCheck,VisualLintTextFieldSize" />
+
+            </LinearLayout>
+
+            <!--Vehicle Insurance No-->
+
+            <LinearLayout
+                android:id="@+id/insurance_no_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@id/inspection_no_layout"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/vehicle_insurance_no"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="5dp"
+                    />
+
+                <EditText
+                    android:id="@+id/insurance_no_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text_bg"
+                    android:minHeight="48dp"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="5dp"
+                    android:padding="5dp"
+                    tools:ignore="Autofill,LabelFor,SpeakableTextPresentCheck,VisualLintTextFieldSize" />
+
+            </LinearLayout>
+
+            <!--Speed Governor License No.-->
+            <LinearLayout
+                android:id="@+id/speed_license_no_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@id/insurance_no_layout"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Speed Governor License No."
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="5dp"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/speed_governor_license_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text_bg"
+                    android:minHeight="48dp"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="5dp"
+                    android:padding="5dp"
+                    tools:ignore="Autofill,LabelFor,SpeakableTextPresentCheck,VisualLintTextFieldSize" />
+
+            </LinearLayout>
+
+            <!--Speed governor License Photo-->
+
+            <LinearLayout
+                android:id="@+id/speed_governor_photo_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@id/speed_license_no_layout"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                tools:ignore="UseCompoundDrawables">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/id_photo_"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="5dp"
+                    />
+                <ImageView
+                    android:id="@+id/id_photo_vehicle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dp"
+                    android:src="@drawable/cam_icon"
+                    android:background="@drawable/edit_text_bg"
+                    tools:ignore="ContentDescription" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <!--Footer-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:background="@color/red"
+        android:minHeight="60dp">
+
+        <TextView
+            android:id="@+id/save_btn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/save_details_"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+</RelativeLayout>

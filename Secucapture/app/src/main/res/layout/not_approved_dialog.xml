@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:id="@+id/main_lyyytt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/prompt_style"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/my_texts"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="DENIED!!"
+            android:textAllCaps="true"
+            android:textColor="@color/maroon" />
+
+        <TextView
+            android:id="@+id/warning_text"
+            style="@style/my_texts"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_margin="15dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Please Proceed To Take Medical Test First."
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:textColor="@color/black" />
+
+
+        <Button
+            android:id="@+id/exitButton"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center"
+            android:background="@color/viewfinder_laser"
+            android:text="EXIT"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

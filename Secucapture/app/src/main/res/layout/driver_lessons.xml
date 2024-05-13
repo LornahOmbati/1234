@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="@layout/activity_lessons_dashboard"
+    android:layout_below="@+id/toolbar"
+    android:layout_marginTop="50dp"
+    android:background="@drawable/bg_main">
+
+    <TextView
+        android:id="@+id/txtdrivername"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:fillViewport="true"
+        android:gravity="center"
+        android:background="@color/white"
+        android:text="hi"
+        android:textAllCaps="true"
+        style="@style/my_texts"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints" />
+
+
+    <RelativeLayout
+        android:id="@+id/enter_idLyt"
+        android:layout_below="@+id/txtdrivername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:id="@+id/idtxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            android:text="Enter Driver's ID:"
+            style="@style/my_texts"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            android:textStyle="normal"
+            tools:ignore="MissingConstraints" />
+
+
+        <EditText
+            android:id="@+id/edt_id_no"
+            android:layout_below="@+id/idtxt"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/edit_text_bg"
+            android:textAllCaps="true"
+            android:imeOptions="flagNoExtractUi"
+            android:inputType="number"
+            android:singleLine="true"
+            android:paddingLeft="10dp"
+            android:textColor="@color/black"
+            android:layout_marginTop="5dp"/>
+
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/fetch_lesson_btn"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/enter_idLyt"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="2dp"
+        android:textStyle="normal"
+        android:textSize="14dp"
+        android:text="Fetch Lesson"
+        android:textColor="@color/black" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/black"
+        android:layout_below="@+id/fetch_lesson_btn"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            android:text="Lessons List"
+            style="@style/my_texts"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:textStyle="normal"/>
+
+        <ListView
+            android:id="@+id/lessonsLst"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:padding="3dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

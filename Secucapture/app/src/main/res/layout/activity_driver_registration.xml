@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.DriverRegistrationActivity"
+    android:background="@drawable/bg_main"
+    android:orientation="vertical">
+
+    <!--Header-->
+    <LinearLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/red"
+        android:gravity="center"
+        android:paddingTop="20dp"
+        android:paddingBottom="5dp"
+        android:minHeight="60dp">
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="60dp"
+            android:layout_marginStart="50dp"
+            android:src="@drawable/logo_main_white"
+            android:contentDescription="@string/title_logo" />
+
+    </LinearLayout>
+
+    <!--Page details-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title_layout"
+        android:layout_marginBottom="50dp"
+        >
+        <LinearLayout
+            android:id="@+id/page_details_layout"
+            android:layout_below="@id/title_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="11dp"
+            android:layout_marginTop="14dp"
+            tools:ignore="ObsoleteLayoutParam">
+
+            <!--FullName-->
+            <LinearLayout
+                android:id="@+id/fullname_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fullname"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="5dp"/>
+
+                <EditText
+                    android:id="@+id/fullName_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text_bg"
+                    android:minHeight="48dp"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:padding="5dp"
+                    tools:ignore="Autofill,LabelFor,SpeakableTextPresentCheck,VisualLintTextFieldSize" />
+
+            </LinearLayout>
+
+            <!--Select Transporter-->
+
+            <LinearLayout
+                android:id="@+id/transporter_layout"
+                android:layout_below="@id/fullname_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/select_transporter"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    android:layout_marginBottom="5dp"/>
+
+                <!--spinner details-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@drawable/edit_text_bg"
+                    android:minHeight="48dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:text="@string/select"
+                        android:paddingTop="5dp"
+                        android:textSize="23sp"
+                        android:textStyle="normal"
+                        android:textColor="@color/black"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="100dp"
+                        />
+
+                    <LinearLayout
+                        android:id="@+id/spinnerContainer"
+                        android:layout_width="70dp"
+                        android:layout_height="48dp">
+
+                        <Spinner
+                            android:id="@+id/spntransporter"
+                            android:layout_width="70dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="10dp"
+                            android:background="@drawable/spinnerb"
+                            android:entries="@array/transporter"
+                            android:minHeight="48dp"
+                            tools:ignore="SpeakableTextPresentCheck"
+                            android:textColor="@color/black"
+                            android:layout_marginStart="5dp"
+                            android:padding="5dp"
+                            />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--Phone No-->
+
+            <LinearLayout
+                android:id="@+id/phone_no_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@id/transporter_layout"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/phone_no"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="5dp"/>
+
+                <EditText
+                    android:id="@+id/phone_no_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text_bg"
+                    android:minHeight="48dp"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:padding="5dp"
+                    tools:ignore="Autofill,LabelFor,SpeakableTextPresentCheck,TextFields,VisualLintTextFieldSize" />
+
+            </LinearLayout>
+
+            <!--ID no-->
+
+            <LinearLayout
+                android:id="@+id/id_no_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@id/phone_no_layout"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/id_no"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="5dp"
+                    />
+
+                <EditText
+                    android:id="@+id/id_no_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text_bg"
+                    android:minHeight="48dp"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:padding="5dp"
+                    tools:ignore="Autofill,LabelFor,SpeakableTextPresentCheck,VisualLintTextFieldSize" />
+
+            </LinearLayout>
+
+            <!--ID photo-->
+
+            <LinearLayout
+                android:id="@+id/id_photo_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@id/id_no_layout"
+                android:layout_marginTop="10dp"
+                tools:ignore="UseCompoundDrawables">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/id_photo"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="5dp"
+                    />
+                <ImageView
+                    android:id="@+id/id_photo_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dp"
+                    android:src="@drawable/cam_icon"
+                    android:background="@drawable/edit_text_bg"
+                    tools:ignore="ContentDescription,InvalidId" />
+
+            </LinearLayout>
+
+            <!--Driver's License No.-->
+            <LinearLayout
+                android:id="@+id/driver_license_no_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@id/id_photo_layout"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/driver_s_license_no"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="5dp"/>
+
+                <EditText
+                    android:id="@+id/license_no_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text_bg"
+                    android:minHeight="48dp"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:padding="5dp"
+                    tools:ignore="Autofill,LabelFor,SpeakableTextPresentCheck,VisualLintTextFieldSize" />
+
+            </LinearLayout>
+
+            <!--Driver's License Photo-->
+            <LinearLayout
+                android:id="@+id/driver_license_photo_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@id/driver_license_no_layout"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="40dp"
+                tools:ignore="UseCompoundDrawables">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/driver_s_license_photo"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="5dp"/>
+                <ImageView
+                    android:id="@+id/license_photo_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dp"
+                    android:src="@drawable/cam_icon"
+                    android:background="@drawable/edit_text_bg"
+                    tools:ignore="ContentDescription" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <!--Footer-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:background="@color/red"
+        android:minHeight="60dp">
+
+        <TextView
+            android:id="@+id/save_btn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/save_details"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+</RelativeLayout>
